@@ -9,4 +9,4 @@ npm run docs:dev
 
 Lessons live in `destination-b2-textbook/`. Quizzes: `<MultipleChoice>` and `<FillBlank>` in any `.md` file.
 
-Push to `main` deploys to GitHub Pages (enable **Settings → Pages → GitHub Actions**).
+Push to `main` deploys to GitHub Pages: https://bodemaxim.github.io/destination/ (enable **Settings → Pages → GitHub Actions**).

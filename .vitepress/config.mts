@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   srcDir: 'destination-b2-textbook',
+  base: process.env.GITHUB_ACTIONS ? '/destination/' : '/',
   title: 'Destination B2',
   description: 'English notes and practice',
   themeConfig: {
