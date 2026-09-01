@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
+import { useQuizItem } from './quizBlock'
 
 const props = defineProps<{
   sentence?: string
@@ -27,12 +28,15 @@ const canonical = computed(() =>
   Array.isArray(props.answer) ? props.answer[0] : props.answer
 )
 
+const { finished } = useQuizItem(checked, isCorrect)
+
 function check() {
-  if (!value.value.trim()) return
+  if (!value.value.trim() || finished.value) return
   checked.value = true
 }
 
 function reset() {
+  if (finished.value) return
   value.value = ''
   checked.value = false
 }
@@ -51,7 +55,7 @@ function reset() {
             type="text"
             autocomplete="off"
             spellcheck="false"
-            :disabled="checked"
+            :disabled="checked || finished"
             :aria-label="sentence"
             @keydown.enter="check"
           />
@@ -66,15 +70,15 @@ function reset() {
         type="text"
         autocomplete="off"
         spellcheck="false"
-        :disabled="checked"
+        :disabled="checked || finished"
         @keydown.enter="check"
       />
     </div>
     <div class="quiz-actions">
-      <button type="button" class="quiz-btn" :disabled="!value.trim() || checked" @click="check">
+      <button type="button" class="quiz-btn" :disabled="!value.trim() || checked || finished" @click="check">
         Check
       </button>
-      <button v-if="checked" type="button" class="quiz-btn quiz-btn-ghost" @click="reset">
+      <button v-if="checked && !finished" type="button" class="quiz-btn quiz-btn-ghost" @click="reset">
         Try again
       </button>
     </div>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
+import { useQuizItem } from './quizBlock'
 
 const props = defineProps<{
   question: string
@@ -14,12 +15,15 @@ const isCorrect = computed(
   () => checked.value && selected.value === props.answer
 )
 
+const { finished } = useQuizItem(checked, isCorrect)
+
 function check() {
-  if (selected.value == null) return
+  if (selected.value == null || finished.value) return
   checked.value = true
 }
 
 function reset() {
+  if (finished.value) return
   selected.value = null
   checked.value = false
 }
@@ -43,7 +47,7 @@ function reset() {
           type="radio"
           :name="question"
           :value="option"
-          :disabled="checked"
+          :disabled="checked || finished"
           :checked="selected === option"
           @change="selected = option"
         />
@@ -51,10 +55,10 @@ function reset() {
       </label>
     </div>
     <div class="quiz-actions">
-      <button type="button" class="quiz-btn" :disabled="selected == null || checked" @click="check">
+      <button type="button" class="quiz-btn" :disabled="selected == null || checked || finished" @click="check">
         Check
       </button>
-      <button v-if="checked" type="button" class="quiz-btn quiz-btn-ghost" @click="reset">
+      <button v-if="checked && !finished" type="button" class="quiz-btn quiz-btn-ghost" @click="reset">
         Try again
       </button>
     </div>

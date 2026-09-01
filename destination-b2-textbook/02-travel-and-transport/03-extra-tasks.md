@@ -6,6 +6,8 @@ Practice the Unit 2 phrasal verbs. Check each item as you go. Spelling is not ca
 
 Choose the phrasal verb that fits.
 
+<QuizBlock unit="Unit 2 · Travel and transport" exercise="1. Multiple choice">
+
 <MultipleChoice
   question="We had to ___ at the airport three hours before our flight to Tokyo."
   :options="['check in', 'take off', 'pull in']"
@@ -66,9 +68,13 @@ Choose the phrasal verb that fits.
   answer="keep up with"
 />
 
+</QuizBlock>
+
 ## 2. Fill in the phrase
 
 Type the missing phrasal verb. Use the particle (off, in, up, and so on).
+
+<QuizBlock unit="Unit 2 · Travel and transport" exercise="2. Fill in the phrase">
 
 <FillBlank
   sentence="I will ___ from the station at six and drive you to the hotel."
@@ -119,3 +125,5 @@ Type the missing phrasal verb. Use the particle (off, in, up, and so on).
   sentence="The taxi almost ___ my suitcase when I stepped into the road."
   :answer="['ran over', 'run over']"
 />
+
+</QuizBlock>
