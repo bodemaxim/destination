@@ -13,7 +13,9 @@ export default defineConfig({
       { text: 'Unit 4', link: '/04-hobbies-sport-and-games/01-vocab' },
       { text: 'Unit 6', link: '/06-science-and-technology/01-vocab' },
       { text: 'Unit 8', link: '/08-the-media/01-vocab' },
-      { text: 'Unit 10', link: '/10-people-and-society/01-vocab' }
+      { text: 'Unit 10', link: '/10-people-and-society/01-vocab' },
+      { text: 'Unit 12', link: '/12-the-law-and-crime/01-vocab' },
+      { text: 'Unit 14', link: '/14-health-and-fitness/01-vocab' }
     ],
     sidebar: [
       { text: 'Exam tasks', link: '/exam-tasks' },
@@ -55,6 +57,22 @@ export default defineConfig({
           { text: 'Vocabulary', link: '/10-people-and-society/01-vocab' },
           { text: 'Vocabulary guide', link: '/10-people-and-society/02-vocab-guide' },
           { text: 'Extra tasks', link: '/10-people-and-society/03-extra-tasks' }
+        ]
+      },
+      {
+        text: 'Unit 12 · The law and crime',
+        items: [
+          { text: 'Vocabulary', link: '/12-the-law-and-crime/01-vocab' },
+          { text: 'Vocabulary guide', link: '/12-the-law-and-crime/02-vocab-guide' },
+          { text: 'Extra tasks', link: '/12-the-law-and-crime/03-extra-tasks' }
+        ]
+      },
+      {
+        text: 'Unit 14 · Health and fitness',
+        items: [
+          { text: 'Vocabulary', link: '/14-health-and-fitness/01-vocab' },
+          { text: 'Vocabulary guide', link: '/14-health-and-fitness/02-vocab-guide' },
+          { text: 'Extra tasks', link: '/14-health-and-fitness/03-extra-tasks' }
         ]
       }
     ]
