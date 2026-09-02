@@ -7,6 +7,7 @@ export default defineConfig({
   description: 'English notes and practice',
   themeConfig: {
     nav: [
+      { text: 'Exam tasks', link: '/exam-tasks' },
       { text: 'Home', link: '/' },
       { text: 'Unit 2', link: '/02-travel-and-transport/01-vocab' },
       { text: 'Unit 4', link: '/04-hobbies-sport-and-games/01-vocab' },
@@ -15,6 +16,7 @@ export default defineConfig({
       { text: 'Unit 10', link: '/10-people-and-society/01-vocab' }
     ],
     sidebar: [
+      { text: 'Exam tasks', link: '/exam-tasks' },
       {
         text: 'Unit 2 · Travel and transport',
         items: [

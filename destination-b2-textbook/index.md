@@ -7,9 +7,11 @@ hero:
   tagline: Vocabulary, examples, and short exercises for class.
   actions:
     - theme: brand
-      text: Unit 2 · Vocabulary
+      text: Учебные материалы
       link: /02-travel-and-transport/01-vocab
     - theme: alt
-      text: Extra tasks
-      link: /02-travel-and-transport/03-extra-tasks
+      text: Яндекс Диск
+      link: https://disk.yandex.ru/d/m3dRUA3gVF20jA
+      target: _blank
+      rel: noopener noreferrer
 ---
